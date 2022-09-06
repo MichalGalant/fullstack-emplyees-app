@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8">
+    <h1 class="display-3">add new employee</h1>
+
+    <div class="mat-elevation">
+        <form #form="ngForm" (ngSubmit)="addEmployee()">
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="John Smith"
+                    name="name" [(ngModel)]="addEmployeeRequest.name">
+                    <mat-hint>input employee name</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="john.smith@email.com"
+                    name="email" [(ngModel)]="addEmployeeRequest.email">
+                    <mat-hint>input employee email</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone</mat-label>
+                    <input matInput placeholder="ex. 111222333"
+                    name="phone" [(ngModel)]="addEmployeeRequest.phone">
+                    <mat-hint>input employee phone</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Salary</mat-label>
+                    <input matInput placeholder="ex. 10000"
+                    name="salary" [(ngModel)]="addEmployeeRequest.salary">
+                    <mat-hint>input employee salary</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Deparment</mat-label>
+                    <input matInput placeholder="ex. Human Resources"
+                    name="department" [(ngModel)]="addEmployeeRequest.department">
+                    <mat-hint>input employee department</mat-hint>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <button mat-raised-button color="primary" type="submit">save</button>
+                <button mat-raised-button color="warn" type="reset">reset</button>
+            </p>
+        </form>
+    </div>
+</div>

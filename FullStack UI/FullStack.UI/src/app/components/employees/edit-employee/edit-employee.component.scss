@@ -1,0 +1,20 @@
+.mat-elevation-z8 {
+    margin: 30px;
+    padding-bottom: 40px;
+
+    .display-3 {
+        padding: 40px;
+    }
+    
+    p {
+        margin: 20px 40px;
+
+        button {
+            margin: 10px;
+        }
+
+        mat-form-field {
+            width: 300px;
+        }
+    }
+}

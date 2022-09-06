@@ -1,0 +1,61 @@
+<div class="mat-elevation-z8">
+    <h1 class="display-3">edit employee</h1>
+
+    <div class="mat-elevation">
+        <form #form="ngForm" (ngSubmit)="updateEmployee()">
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>ID</mat-label>
+                    <input matInput
+                    name="id" [(ngModel)]="employeeDetails.id" readonly>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="John Smith"
+                    name="name" [(ngModel)]="employeeDetails.name">
+                    <mat-hint>edit employee name</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="john.smith@email.com"
+                    name="email" [(ngModel)]="employeeDetails.email">
+                    <mat-hint>edit employee email</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone</mat-label>
+                    <input matInput placeholder="ex. 111222333"
+                    name="phone" [(ngModel)]="employeeDetails.phone">
+                    <mat-hint>edit employee phone</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Salary</mat-label>
+                    <input matInput placeholder="ex. 10000"
+                    name="salary" [(ngModel)]="employeeDetails.salary">
+                    <mat-hint>edit employee salary</mat-hint>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill">
+                    <mat-label>Deparment</mat-label>
+                    <input matInput placeholder="ex. Human Resources"
+                    name="department" [(ngModel)]="employeeDetails.department">
+                    <mat-hint>edit employee department</mat-hint>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <button mat-raised-button color="primary" type="submit">save</button>
+                <button mat-raised-button color="warn" type="button"
+                (click)="deleteEmployee(employeeDetails.id)">delete</button>
+            </p>
+        </form>
+    </div>
+</div>
